@@ -16,11 +16,8 @@ function asyncHandler(cb){
 
 /* GET books listing. */
 router.get('/', asyncHandler(async (req, res) => {
-  const books = await Book.findAll({
-    attributes: ['id', 'title', 'author', 'genre', 'year'],
-    order: [["title", "ASC"]]
-  });
-  res.render("index", { books, title: 'Library' }) 
+  const books = await Book.findAll( { order: [['title', 'ASC']]} );
+  res.render('index', { books: books, title: 'Books' }) 
 }));
 
 module.exports = router;
