@@ -20,4 +20,9 @@ router.get('/', asyncHandler(async (req, res) => {
   res.render('index', { books: books, title: 'Books' }) 
 }));
 
+/* Creating new Book form */
+router.get('/new', asyncHandler(async (req, res) => {
+  res.render('books/new-book', { books: {}, title: 'New Book' }) 
+}));
+
 module.exports = router;
