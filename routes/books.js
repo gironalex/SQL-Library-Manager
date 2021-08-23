@@ -17,12 +17,14 @@ function asyncHandler(cb){
 /* GET books listing. */
 router.get('/', asyncHandler(async (req, res) => {
   const books = await Book.findAll( { order: [['title', 'ASC']]} );
-  res.render('index', { books: books, title: 'Books' }) 
+  res.render('index', { books: books, title: 'Books' }); 
 }));
 
 /* Creating new Book form */
+
 router.get('/new', asyncHandler(async (req, res) => {
-  res.render('books/new-book', { books: {}, title: 'New Book' }) 
+  res.render('books/new', { book: {}, title: 'New Book' }); 
 }));
+
 
 module.exports = router;
