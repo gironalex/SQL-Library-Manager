@@ -21,7 +21,6 @@ router.get('/', asyncHandler(async (req, res) => {
 }));
 
 /* Creating new Book form */
-
 router.get('/new', asyncHandler(async (req, res) => {
   res.render('books/new', { book: {}, title: 'New Book' }); 
 }));
