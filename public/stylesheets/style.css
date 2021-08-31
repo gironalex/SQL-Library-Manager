@@ -1,27 +1,36 @@
 body {
   padding: 10px 50px 50px;
   font: 18px "Garamond", serif;
+  background-color: rgb(255, 255, 255);
+}
+.styled-table {
+  border-radius: 25px;
+  background-color: #007a7a;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 a {
-  color: #019875;
+  color: #4169e1;
   text-decoration: none;
   font-weight: bold;
   transition: 0.4s;
 }
 
   a:hover {
-    color: black;
+    color: #D12784;
   }
 
 a.button, input[type=submit] {
   color: white;
-  background: #019875;
+  background: #FFA500;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   padding: 10px 14px 12px;
   font-size: 14px;
   border-radius: 2px;
   cursor: pointer;
+  border-color: #FFA500;
+  border-radius: 15px 25px;
 }
 
 form a.button, input[type=submit] {
@@ -34,7 +43,10 @@ input[type=submit] {
 }
 
   a.button:hover, input[type=submit]:hover {
-    background-color: #01b189;
+    background-color: white;
+    border: solid;
+    border-color: #FFA500;
+    color: #FFA500;
   }
 
 p {
@@ -54,7 +66,7 @@ h2 {
 }
 
 th {
-  border-bottom: 2px solid #D8B493;
+  border-bottom: 2px solid #344F00;
   text-align: left;
   padding: 5px 20px 5px 10px;
 }
