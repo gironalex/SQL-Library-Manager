@@ -43,8 +43,10 @@ const models = require('./models');
 /* Error Handling */
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  const err = new Error("Page Not Found");
+  const err = new Error();
   err.status = 404;
+  err.message = "Page Not Found";
+  res.render("page-not-found", { err });
   next(err);
 });
 
